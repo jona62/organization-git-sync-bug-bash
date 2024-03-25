@@ -1,10 +1,4 @@
-AWSTemplateFormatVersion: 2010-09-09
+AWSTemplateFormatVersion: '2010-09-09'
 Resources:
-    MyWaitHandle:
-        Type: 'AWS::CloudFormation::WaitConditionHandle'
-    
-    MyWaitCondition:
-        Type: 'AWS::CloudFormation::WaitCondition'
-        Properties:
-          Handle: !Ref MyWaitHandle
-          Timeout: '2'  # Timeout in seconds
+  MyS3Bucket:
+    Type: 'AWS::S3::Bucket'
